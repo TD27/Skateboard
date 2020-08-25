@@ -16,9 +16,6 @@ import matplotlib.pyplot as plt
 
 # Experiment consists of 10 measurements.
 
-# In[2]:
-
-
 VideoTimeOfTheExperiement = {
     "Exp1" : "0.19",
     "Exp2" : "1.20",
@@ -47,9 +44,6 @@ URLKeys_Skate = {
 
 # Each attempt takes 20 seconds, but only 2-3 seconds are vital. Following "ranges" focus on the most critical data for further analysis.
 
-# In[3]:
-
-
 Ranges = {
     "Exp2" : [500,900],
     "Exp3" : [600,1000],
@@ -64,9 +58,6 @@ Ranges = {
 
 
 # This script downloads data from Google Sheets, converts headers and plots data into the graphs. Each attempt has two graphs: Gyroscope and Accelerometer.
-
-# In[4]:
-
 
 for i in URLKeys_Skate:
     GoogleSheetID=URLKeys_Skate[i]
@@ -117,12 +108,3 @@ for i in URLKeys_Skate:
     plt.plot(graphdata_Acc.Time, graphdata_Acc.Acceleration_z, color="green")
 
     plt.show()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
